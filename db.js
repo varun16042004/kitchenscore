@@ -36,7 +36,7 @@ async function searchRestaurants(query) {
     (r) =>
       r.name.toLowerCase().includes(q) ||
       r.area.toLowerCase().includes(q) ||
-      r.address.toLowerCase().includes(q)
+      (r.restaurantType && r.restaurantType.toLowerCase().includes(q))
   );
 }
 

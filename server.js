@@ -27,18 +27,27 @@ function sendJson(res, status, payload) {
   res.end(body);
 }
 
-function serializeRestaurant(r) {
-  return {
+function serializeRestaurant(r, opts = {}) {
+  const events = Array.isArray(r.events) ? r.events : [];
+  const latest = events[0] || null;
+
+  const summary = {
     id: r.id,
     name: r.name,
     area: r.area,
-    address: r.address,
-    fssaiLicense: r.fssaiLicense,
+    restaurantType: r.restaurantType || null,
     isDemoData: !!r.isDemoData,
-    rating: r.rating,
-    freshness: getFreshness(r.rating ? r.rating.inspectionDate : null),
+    latestEvent: latest,
+    freshness: getFreshness(latest ? latest.date : null, latest ? latest.type : null),
+    eventCount: events.length,
     requestCount: r.requestCount || 0,
   };
+
+  if (opts.full) {
+    summary.events = events;
+  }
+
+  return summary;
 }
 
 async function readBody(req) {
@@ -116,7 +125,7 @@ const server = http.createServer(async (req, res) => {
     if (restaurantMatch && req.method === "GET") {
       const restaurant = await db.getRestaurantById(restaurantMatch[1]);
       if (!restaurant) return sendJson(res, 404, { error: "Restaurant not found" });
-      return sendJson(res, 200, serializeRestaurant(restaurant));
+      return sendJson(res, 200, serializeRestaurant(restaurant, { full: true }));
     }
 
     const requestInspectionMatch = pathname.match(/^\/api\/restaurants\/([^/]+)\/request-inspection$/);
