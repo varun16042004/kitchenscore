@@ -1,89 +1,3954 @@
 {
-  "_note": "SAMPLE / DEMO DATA ONLY. These are placeholder records used to build and test KitchenScore's UI and freshness logic. None of this reflects a real FSSAI inspection of a real restaurant. Before any public launch, this file must be replaced with a manually curated dataset of real, sourced, dated FSSAI Hygiene Rating Scheme records, per the Project Overview's Key Deliverables and Compliance & Governance Summary (attribution-first, sourced-and-dated data, no unverified claims).",
+  "_note": "REAL DATA \u2014 sourced from publicly reported enforcement/inspection activity in Hyderabad, 2024\u20132026, compiled from official social accounts (Commissioner of Food Safety Telangana @cfs_telangana, Cyberabad Municipal Corporation @CMC_Offcl, Malkajgiri Municipal Corporation) and cross-checked against news reporting (NDTV Food, New Indian Express, Siasat, and others). This is NOT FSSAI's Hygiene Rating Scheme data \u2014 it is a separate, distinct set of enforcement and municipal-inspection records. Two event types are tracked: 'rating' (a numeric municipal hygiene score, from CMC) and 'raid' (an enforcement inspection with no formal score, from CFS Telangana or Malkajgiri task forces). Inclusion means a public inspection or raid occurred \u2014 it does not by itself mean a restaurant is currently unsafe; some inspections found good compliance. This is also not a complete statutory log: GHMC alone reportedly ran 9,656 food-safety inspections in 2025, of which only a fraction were publicly named. Every event carries its own source citation.",
   "restaurants": [
     {
-      "id": "spice-garden-banjara-hills",
-      "name": "[DEMO] Spice Garden",
-      "area": "Banjara Hills",
-      "address": "Road No. 12, Banjara Hills, Hyderabad",
-      "fssaiLicense": "DEMO-0000000001",
-      "isDemoData": true,
-      "rating": {
-        "score": 78,
-        "category": "Good",
-        "inspectionDate": "2026-06-15",
-        "source": "FSSAI Hygiene Rating Scheme"
-      },
+      "id": "10-pounder-pizzeria-near-smr-vinay-technopolis",
+      "name": "10 Pounder Pizzeria",
+      "area": "Near SMR Vinay Technopolis",
+      "restaurantType": "Pizzeria",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 94,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
       "requestCount": 0
     },
     {
-      "id": "cloud-kitchen-express-gachibowli",
-      "name": "[DEMO] Cloud Kitchen Express",
-      "area": "Gachibowli",
-      "address": "Nanakramguda, Gachibowli, Hyderabad",
-      "fssaiLicense": "DEMO-0000000002",
-      "isDemoData": true,
-      "rating": {
-        "score": 92,
-        "category": "Excellent",
-        "inspectionDate": "2025-01-10",
-        "source": "FSSAI Hygiene Rating Scheme"
-      },
-      "requestCount": 0
-    },
-    {
-      "id": "old-town-diner-kukatpally",
-      "name": "[DEMO] Old Town Diner",
-      "area": "Kukatpally",
-      "address": "KPHB Colony, Kukatpally, Hyderabad",
-      "fssaiLicense": "DEMO-0000000003",
-      "isDemoData": true,
-      "rating": {
-        "score": 55,
-        "category": "Needs Improvement",
-        "inspectionDate": "2019-03-22",
-        "source": "FSSAI Hygiene Rating Scheme"
-      },
-      "requestCount": 0
-    },
-    {
-      "id": "green-leaf-cafe-jubilee-hills",
-      "name": "[DEMO] Green Leaf Cafe",
+      "id": "36-downtown-brew-pub-jubilee-hills",
+      "name": "36 Downtown Brew Pub",
       "area": "Jubilee Hills",
-      "address": "Road No. 36, Jubilee Hills, Hyderabad",
-      "fssaiLicense": null,
-      "isDemoData": true,
-      "rating": null,
+      "restaurantType": "Restaurant / pub",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-16",
+          "dateLabel": "16 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Expired food items; uncovered semi-prepared food; open bins; employee medical certificates unavailable.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Jubilee Hills restaurants found flouting hygiene norms",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2024/May/17/jubilee-hills-restaurants-found-flouting-hygiene-norms"
+        }
+      ],
       "requestCount": 0
     },
     {
-      "id": "family-treat-restaurant-secunderabad",
-      "name": "[DEMO] Family Treat Restaurant",
+      "id": "4-seasons-multi-cuisine-restaurant-tolichowki",
+      "name": "4 Seasons Multi Cuisine Restaurant",
+      "area": "Tolichowki",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-05",
+          "dateLabel": "5 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Serious violations",
+          "findings": "Heavy cockroach infestation, rat faeces, dirty refrigerators, mixed/unlabelled food, clogged drains/stagnation.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "4 Seasons repeat inspection",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-cockroach-and-rodent-infestation-found-at-4-seasons-multi-cuisine-restaurant-in-tolichowki-7889083"
+        },
+        {
+          "type": "raid",
+          "date": "2024-07-03",
+          "dateLabel": "3 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Open kitchen/pest-proofing issues, water stagnation, loose plaster and other hygiene lapses.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Uncovered At Tolichowki, Gachibowli Restaurants",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-uncovered-at-restaurants-in-tolichowki-gachibowli-areas-of-hyderabad-6058155"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "4m-biryani-house-musheerabad-secunderabad",
+      "name": "4M Biryani House",
+      "area": "Musheerabad / Secunderabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-20",
+          "dateLabel": "20 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "PPE, pest-proofing, labelling/open-bin and flooring issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food safety officials raid restaurants in Secunderabad",
+          "sourceUrl": "https://www.siasat.com/food-safety-officials-raid-restaurants-in-secunderabad-3083188/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-as-rao-nagar",
+      "name": "AB's - Absolute Barbecues",
+      "area": "AS Rao Nagar",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Beetle-infested flour and hygiene/storage lapses.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-kompally",
+      "name": "AB's - Absolute Barbecues",
+      "area": "Kompally",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Hygiene/storage violations during chain-wide inspection.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-medipally",
+      "name": "AB's - Absolute Barbecues",
+      "area": "Medipally",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Expired food and hygiene/storage lapses.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-banjara-hills",
+      "name": "AB's - Absolute Barbecues",
+      "area": "Banjara Hills",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Cockroach/housefly infestation and other hygiene violations.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-jubilee-hills",
+      "name": "AB's - Absolute Barbecues",
+      "area": "Jubilee Hills",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Hygiene/storage violations during chain-wide inspection.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-gachibowli",
+      "name": "AB's - Absolute Barbecues",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Cockroach/housefly infestation and other hygiene violations.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-inorbit-mall-madhapur",
+      "name": "AB's - Absolute Barbecues",
+      "area": "Inorbit Mall / Madhapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Rotten/fungal fruits and other hygiene/storage lapses.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-miyapur",
+      "name": "AB's - Absolute Barbecues",
+      "area": "Miyapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Hygiene/storage violations during chain-wide inspection.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-vanasthalipuram",
+      "name": "AB's - Absolute Barbecues",
+      "area": "Vanasthalipuram",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Hygiene/storage violations during chain-wide inspection.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ab-s-absolute-barbecues-secunderabad",
+      "name": "AB's - Absolute Barbecues",
       "area": "Secunderabad",
-      "address": "SP Road, Secunderabad, Hyderabad",
-      "fssaiLicense": "DEMO-0000000005",
-      "isDemoData": true,
-      "rating": {
-        "score": 88,
-        "category": "Good",
-        "inspectionDate": "2026-07-01",
-        "source": "FSSAI Hygiene Rating Scheme"
-      },
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-09-09",
+          "dateLabel": "9 Sep 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Notices / enforcement",
+          "findings": "Hygiene/storage violations during chain-wide inspection.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Absolute Barbecues chain-wide inspection",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2025/Sep/11/roach-infestation-to-rat-faeces-absolute-barbecues-under-scanner"
+        }
+      ],
       "requestCount": 0
     },
     {
-      "id": "riverside-grill-lb-nagar",
-      "name": "[DEMO] Riverside Grill",
-      "area": "LB Nagar",
-      "address": "LB Nagar Ring Road, Hyderabad",
-      "fssaiLicense": "DEMO-0000000006",
-      "isDemoData": true,
-      "rating": {
-        "score": 40,
-        "category": "Poor",
-        "inspectionDate": "2021-11-05",
-        "source": "FSSAI Hygiene Rating Scheme"
-      },
+      "id": "al-saud-bait-al-mandi-malakpet",
+      "name": "Al Saud Bait al Mandi",
+      "area": "Malakpet",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-07",
+          "dateLabel": "7 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Cockroach infestation; uncovered/unlabelled food; synthetic colours; missing screens/PPE/documents.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Malakpet And Dilsukhnagar",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-malakpet-and-dilsukhnagar-in-hyderabad-6320341"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "alpha-hotel-secunderabad",
+      "name": "Alpha Hotel",
+      "area": "Secunderabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-06-18",
+          "dateLabel": "18 Jun 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Case proposed / violations",
+          "findings": "Meat/semi-prepared storage issues; open bins; ceiling damage; unlabelled items; alleged obstruction of inspection.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "CFS to file case against eatery in Secunderabad",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2024/Jun/21/commissioner-of-food-safety-to-file-case-against-eatery-in-secunderabad-for-obstructing-task-force-team"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "am-aha-restaurant-infinity-mall-madinaguda",
+      "name": "Am Aha Restaurant",
+      "area": "Infinity Mall, Madinaguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-07-04",
+          "dateLabel": "4 Jul 2026",
+          "dateExact": true,
+          "score": 85,
+          "outcome": "Improvement notice",
+          "findings": "Hygiene/storage/pest-control issues reported; CMC score published in secondary coverage.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Four Cyberabad restaurants inspected",
+          "sourceUrl": "https://www.newindianexpress.com/cities/hyderabad/2026/Jul/05/cockroaches-rat-droppings-found-at-four-cyberabad-restaurants-during-inspections"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "am-pm-food-court-dlf-food-street-gachibowli",
+      "name": "AM-PM Food Court",
+      "area": "DLF Food Street / Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-14",
+          "dateLabel": "14 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Licence/document/PPE/pest-screen/labelling/open-bin/drain issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations In And Around DLF Foodstreet",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-violations-found-in-and-around-dlf-foodstreet-gachibowli-6349007"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "aman-mithaiwala-mallapur",
+      "name": "Aman Mithaiwala",
+      "area": "Mallapur",
+      "restaurantType": "Sweet shop / eatery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-27",
+          "dateLabel": "27 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food found / serious violations",
+          "findings": "About 300 kg expired products; fungal food/excess colour; licensing-jurisdiction issue; sticky floor/foul smell.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Aman Mithaiwala inspection",
+          "sourceUrl": "https://www.ndtv.com/food/300-kilos-of-expired-food-tobacco-stains-and-more-violations-found-at-this-hyderabad-restaurant-8046360"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "amaravati-hotel-peerzadiguda",
+      "name": "Amaravati Hotel",
+      "area": "Peerzadiguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-11",
+          "dateLabel": "11 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Synthetic colours; unlabelled food; no screens; PPE and required-report gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Peerzadiguda food-establishment inspections",
+          "sourceUrl": "https://www.ndtv.com/food/task-force-inspects-food-establishments-in-hyderabad-s-peerzadiguda-area-discovers-violations-6557227"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "amogha-hotel-cafe-ameerpet",
+      "name": "Amogha Hotel & Cafe",
+      "area": "Ameerpet",
+      "restaurantType": "Restaurant / cafe",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-06",
+          "dateLabel": "6 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Serious violations",
+          "findings": "Rat infestation, toilet opening into kitchen, poor fridge/labelling/storage and missing records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Ameerpet restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-unhygienic-conditions-at-two-restaurants-in-ameerpet-area-7869585"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "angaara-restaurant-miyapur",
+      "name": "Angaara Restaurant",
+      "area": "Miyapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-30",
+          "dateLabel": "30 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Licence/record, floor/stagnation/cobweb/open-bin/cockroach/synthetic-colour issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Miyapur and Patancheru restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hygiene-lapses-unsafe-food-found-at-restaurants-in-miyapur-and-patancheruvu-near-hyderabad-6713276"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "antera-madeenaguda",
+      "name": "AnTeRa",
+      "area": "Madeenaguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 83,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "athidhi-restaurant-miyapur",
+      "name": "Athidhi Restaurant",
+      "area": "Miyapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-30",
+          "dateLabel": "30 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Unlabelled/uncovered food; rusty refrigerator; synthetic/cosmetic product issue; cockroaches; missing records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Miyapur and Patancheru restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hygiene-lapses-unsafe-food-found-at-restaurants-in-miyapur-and-patancheruvu-near-hyderabad-6713276"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "baahubali-kitchen-madhapur",
+      "name": "Baahubali Kitchen",
+      "area": "Madhapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-23",
+          "dateLabel": "23 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Heavy cockroach infestation; unhygienic kitchen/storage; synthetic colours; licensing/document issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Expired Items, Unlabelled Food Found At The Rameshwaram Cafe",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurants-raids-expired-items-unlabelled-food-found-at-the-rameshwaram-cafe-in-hyderabad-5733395"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "babai-hotel-patancheru",
+      "name": "Babai Hotel",
+      "area": "Patancheru",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-01",
+          "dateLabel": "1 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Cockroaches; expired items; unlabelled food; no screens; licensing and report gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Miyapur and Patancheru restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hygiene-lapses-unsafe-food-found-at-restaurants-in-miyapur-and-patancheruvu-near-hyderabad-6713276"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "badeymiyan-kabab-lakdikapul",
+      "name": "Badeymiyan Kabab",
+      "area": "Lakdikapul",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-11-26",
+          "dateLabel": "26 Nov 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Food-safety and hygiene violations reported during the drive.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Major violations at Lakdikapul eateries",
+          "sourceUrl": "https://telanganatoday.com/food-safety-teams-detect-major-violations-in-eateries-at-lakdikapul"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "bahar-biryani-cafe-chaitanyapuri",
+      "name": "Bahar Biryani Cafe",
+      "area": "Chaitanyapuri",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-22",
+          "dateLabel": "22 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired goods discarded / violations",
+          "findings": "Open drains/stagnation; no screens; expired products; synthetic colours; no medical/water/FoSTaC; poor fridge segregation.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Major breaches at Hyderabad restaurants",
+          "sourceUrl": "https://food.ndtv.com/news/food-safety-team-uncovers-major-breaches-in-popular-hyderabad-restaurants-6863473"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "bahar-cafe-madeenaguda",
+      "name": "Bahar Cafe",
+      "area": "Madeenaguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-18",
+          "dateLabel": "18 Jun 2026",
+          "dateExact": true,
+          "score": 40,
+          "outcome": "Show-cause; kitchen operations halted",
+          "findings": "Open drains/food waste, dirty ceiling, water accumulation, unlabelled food, missing records, toilet proximity. Score 38/96.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad food-safety drive - four eateries",
+          "sourceUrl": "https://hyderabadmail.com/cyberabad-food-safety-drive-finds-hygiene-violations-at-four-eateries/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "baisakhi-family-dhaba-kandlakoya-medchal",
+      "name": "Baisakhi Family Dhaba",
+      "area": "Kandlakoya, Medchal",
+      "restaurantType": "Dhaba / restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-07-03",
+          "dateLabel": "3 Jul 2026",
+          "dateExact": true,
+          "score": 63,
+          "outcome": "Improvement direction",
+          "findings": "Expired food; missing records/licence display; open kitchen/bins; synthetic colour; dead flies; rusted knives.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Food safety violations at Cyberabad establishments",
+          "sourceUrl": "https://dairynews.today/global/news/food_safety_violations_detected_at_three_establishments_in_cyberabad_9248891.html"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "bake-max-foods-brown-bear-kukatpally",
+      "name": "Bake Max Foods (Brown Bear)",
+      "area": "Kukatpally",
+      "restaurantType": "Bakery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-18",
+          "dateLabel": "18 Jun 2026",
+          "dateExact": true,
+          "score": 78,
+          "outcome": "Show-cause notice; sample collected",
+          "findings": "Unclean eggs, cockroaches, rusted trays, slippery floor, pigeons in storage, missing product labels. Score 71/92.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad food-safety drive - four eateries",
+          "sourceUrl": "https://hyderabadmail.com/cyberabad-food-safety-drive-finds-hygiene-violations-at-four-eateries/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "bal-kishan-milk-bhandar-begum-bazaar",
+      "name": "Bal Kishan Milk Bhandar",
+      "area": "Begum Bazaar",
+      "restaurantType": "Dairy / eatery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-26",
+          "dateLabel": "26 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Food-safety and hygiene lapses reported during the drive.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Violations Found In Begum Bazaar",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-multiple-food-safety-violations-found-in-hyderabads-begum-bazaar-6202095"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "barbeque-nation-gsm-mall-madinaguda",
+      "name": "Barbeque Nation",
+      "area": "GSM Mall, Madinaguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-29",
+          "dateLabel": "29 Jun 2026",
+          "dateExact": true,
+          "score": 79,
+          "outcome": "Improvement notice",
+          "findings": "Unlabelled desserts discarded; missing testing/packaging/pest records; dirty crates/containers; damaged boards; cockroaches. Score 86/110.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Barbeque Nation GSM Mall inspection",
+          "sourceUrl": "https://hyderabadmail.com/barbeque-nation-gsm-mall-madinaguda-food-safety-inspection-june-2026/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "baskin-robbins-banjara-hills",
+      "name": "Baskin Robbins",
+      "area": "Banjara Hills",
+      "restaurantType": "Ice cream outlet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-22",
+          "dateLabel": "22 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired goods discarded",
+          "findings": "Expired food product; medical fitness certificates not produced.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Multiple Restaurants And Eating Joints In Hyderabad Raided",
+          "sourceUrl": "https://food.ndtv.com/news/restaurants-bakeries-and-more-in-hyderabad-raided-expired-items-and-serious-food-safety-issues-uncovered-5726589"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "berlin-restaurant-and-club-atrium-mall-gachibowli",
+      "name": "Berlin Restaurant and Club",
+      "area": "Atrium Mall, Gachibowli",
+      "restaurantType": "Restaurant / club",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-19",
+          "dateLabel": "19 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired goods discarded / violations",
+          "findings": "Multiple expired products; unlabelled refrigerator food; poor segregation; cleaning chemicals with food; open bins.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Gachibowli restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-continue-heres-what-was-flagged-in-gachibowli-7333820"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "bheemavaram-pulao-habsiguda",
+      "name": "Bheemavaram Pulao",
+      "area": "Habsiguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-03",
+          "dateLabel": "3 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Registration/licence-display/records issues; cockroaches; fungal vegetables; synthetic colours; no PPE/screens.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Habsiguda restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-continue-heres-what-was-found-in-and-around-habsiguda-6507092"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "bismi-maggi-and-juice-centre-dlf-gachibowli",
+      "name": "Bismi Maggi and Juice Centre",
+      "area": "DLF / Gachibowli",
+      "restaurantType": "Juice / snack outlet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-27",
+          "dateLabel": "27 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Spoiled food discarded / serious violations",
+          "findings": "Rodent, housefly and cockroach infestation; uncovered food/open bins; spoiled fruit; PPE/record gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "DLF food-joint inspections",
+          "sourceUrl": "https://telanganatoday.com/hyderabad-food-safety-officials-conduct-raids-at-dlf-detect-safety-violations-in-several-food-joints"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "cafe-niloufer-banjara-hills",
+      "name": "Cafe Niloufer",
+      "area": "Banjara Hills",
+      "restaurantType": "Cafe / bakery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-02",
+          "dateLabel": "2 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Expired ingredients and unlabelled syrup/spices/cakes; other core records available.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Banjara Hills food-safety inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-task-force-finds-food-safety-violations-in-hyderabads-banjara-hills-6486622"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "capital-multicuisine-restaurant-malakpet",
+      "name": "Capital Multicuisine Restaurant",
+      "area": "Malakpet",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-07",
+          "dateLabel": "7 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Cockroaches; flies/possible rodent activity; dirty refrigerators; synthetic colours; documentation/PPE gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Malakpet And Dilsukhnagar",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-malakpet-and-dilsukhnagar-in-hyderabad-6320341"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "chicha-s-asli-hyderabadi-khana-masab-tank",
+      "name": "Chicha's Asli Hyderabadi Khana",
+      "area": "Masab Tank",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-24",
+          "dateLabel": "24 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Synthetic colours; licensing category issue; poor segregation/storage; missing records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations At More Telangana Restaurants",
+          "sourceUrl": "https://www.ndtv.com/food/from-taaza-all-day-breakfast-to-chichas-asli-hyderabadi-khana-food-safety-violations-at-more-telangana-restaurants-5762691"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "chinese-wok-gsm-mall-madinaguda",
+      "name": "Chinese Wok",
+      "area": "GSM Mall, Madinaguda",
+      "restaurantType": "QSR",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-29",
+          "dateLabel": "29 Jun 2026",
+          "dateExact": true,
+          "score": 82,
+          "outcome": "Improvement notice",
+          "findings": "FSSAI licence not prominently displayed; unclean eggs/water taps; missing testing/medical records; hygiene issues.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "GSM Mall restaurant notices",
+          "sourceUrl": "https://hyderabadnewshunt.com/food-safety-notices-gsm-mall-restaurants/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "daily-rituals-jubilee-hills",
+      "name": "Daily Rituals",
+      "area": "Jubilee Hills",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-13",
+          "dateLabel": "13 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Seizure / expired food discarded",
+          "findings": "Mislabelled/expired items; dirty refrigerators/wet floor/drains; licence not displayed; records missing.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Unsafe food found in Jubilee Hills",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-many-kilos-of-unsafe-food-found-in-jubilee-hills-area-7276149"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "dosa-darbar-and-chaat-republic-next-galleria-mall-punjagutta",
+      "name": "Dosa Darbar and Chaat Republic",
+      "area": "Next Galleria Mall, Punjagutta",
+      "restaurantType": "Restaurant / food court",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-12",
+          "dateLabel": "12 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Expired registration; cockroach infestation; broken flooring; open bins; PPE/medical gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Next Galleria Mall",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-next-galleria-mall-in-hyderabad-heres-what-you-should-know-6115892"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "eatclub-brands-pvt-ltd-central-kitchen-ghatkesar-medchal-malkajgiri",
+      "name": "EatClub Brands Pvt Ltd central kitchen",
+      "area": "Ghatkesar, Medchal-Malkajgiri",
+      "restaurantType": "Cloud kitchen",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2026-07-29",
+          "dateLabel": "29 Jul 2026",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Licence suspended; food seized",
+          "findings": "Cockroaches/flies/rodents; poor meat/egg/veg-nonveg storage; temperature and labelling issues; synthetic colours; bare-hand handling.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "EatClub central kitchen licence suspended",
+          "sourceUrl": "https://www.siasat.com/eatclub-kitchen-license-suspended-over-cockroaches-fake-labels-3515973/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "emerald-mithai-shop-vidyanagar",
+      "name": "Emerald Mithai Shop",
+      "area": "Vidyanagar",
+      "restaurantType": "Sweet shop",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-13",
+          "dateLabel": "13 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Pest/medical/FoSTaC gaps; open oil-manufacturing area; unlabelled sweets; open bins; PPE issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Vidyanagar restaurant raids",
+          "sourceUrl": "https://food.ndtv.com/news/food-safety-board-exposes-hyderabad-eateries-for-violating-hygiene-norms-6569166"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "exotica-hitec-city",
+      "name": "Exotica",
+      "area": "HITEC City",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-27",
+          "dateLabel": "27 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Live cockroach in storeroom; unhygienic meat refrigerator; open bins; semi-cooked food not labelled.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Inspections At Restaurants In HITEC City",
+          "sourceUrl": "https://www.ndtv.com/food/inspections-at-restaurants-in-hyderabad-s-hitec-city-reveal-food-safety-violations-6220488"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "fire-water-fine-dining-phoenix-towers-hitec-city",
+      "name": "Fire Water Fine Dining",
+      "area": "Phoenix Towers, HITEC City",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-07-04",
+          "dateLabel": "4 Jul 2026",
+          "dateExact": true,
+          "score": 62,
+          "outcome": "Improvement notice",
+          "findings": "Cockroaches, rat droppings, rusted freezer, raw chicken unwrapped, open bins, missing medical certificates.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Four Cyberabad restaurants inspected",
+          "sourceUrl": "https://www.newindianexpress.com/cities/hyderabad/2026/Jul/05/cockroaches-rat-droppings-found-at-four-cyberabad-restaurants-during-inspections"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "flechazo-gachibowli",
+      "name": "Flechazo",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-17",
+          "dateLabel": "17 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired chicken discarded / violations",
+          "findings": "PPE gaps; expired packaged chicken; unlabelled/uncovered refrigerator food; open bins.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "More Gachibowli Restaurants Inspected",
+          "sourceUrl": "https://www.ndtv.com/food/more-restaurants-in-hyderabads-gachibowli-area-inspected-by-food-safety-officials-see-what-was-found-6371569"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "garden-restaurant-secunderabad",
+      "name": "Garden Restaurant",
+      "area": "Secunderabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2026-07-25",
+          "dateLabel": "25 Jul 2026",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Action initiated",
+          "findings": "Houseflies, poor sanitation, uncovered/unlabelled food, cross-contamination, dirty refrigerators, missing pest/medical/water records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Garden Restaurant inspection",
+          "sourceUrl": "https://www.deccanchronicle.com/southern-states/telangana/food-safety-squad-flags-hygiene-lapses-at-secunderabads-garden-restaurant-1973845"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "golden-crown-multicuisine-restaurant-padmarao-nagar",
+      "name": "Golden Crown Multicuisine Restaurant",
+      "area": "Padmarao Nagar",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-20",
+          "dateLabel": "20 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "No valid licence / violations",
+          "findings": "No valid licence; water stagnation; open bins; ceiling/record/PPE/labelling issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food safety officials raid restaurants in Secunderabad",
+          "sourceUrl": "https://www.siasat.com/food-safety-officials-raid-restaurants-in-secunderabad-3083188/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "good-fresh-the-pizza-house-vidyanagar",
+      "name": "Good Fresh - The Pizza House",
+      "area": "Vidyanagar",
+      "restaurantType": "Pizza / QSR",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-13",
+          "dateLabel": "13 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Registration not displayed; medical and pest-control records unavailable.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Vidyanagar restaurant raids",
+          "sourceUrl": "https://food.ndtv.com/news/food-safety-board-exposes-hyderabad-eateries-for-violating-hygiene-norms-6569166"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "grill-9-secunderabad",
+      "name": "Grill 9",
+      "area": "Secunderabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-08",
+          "dateLabel": "8 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired goods discarded / violations",
+          "findings": "Expired sauces/masala, suspected non-food rose water, rat signs, PPE/storage/refrigerator/document lapses.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Vivaha Bhojanambu restaurant inspection",
+          "sourceUrl": "https://hyderabadmail.com/sundeep-kishan-vivaha-bhojanambu-restaurant-inspection/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "gulshan-hotel-muthangi-orr",
+      "name": "Gulshan Hotel",
+      "area": "Muthangi / ORR",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-12",
+          "dateLabel": "12 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "No valid licence / serious violations",
+          "findings": "No valid licence/training/medical/water records; very unhygienic premises; synthetic colours; storage issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Restaurant inspections near ORR Muthangi",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-issues-flagged-at-restaurants-near-orr-muthangi-7248634"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "haiku-restaurant-banjara-hills",
+      "name": "Haiku Restaurant",
+      "area": "Banjara Hills",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-02",
+          "dateLabel": "2 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Expired ingredients, unlabelled refrigerator food, damaged floor and drainage/waste issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Banjara Hills food-safety inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-task-force-finds-food-safety-violations-in-hyderabads-banjara-hills-6486622"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hakuna-matata-kitchen-gachibowli",
+      "name": "Hakuna Matata Kitchen",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-01",
+          "dateLabel": "1 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Licence/PPE/insect-screen gaps; unlabelled/uncovered food; pest records missing.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Uncovered At Tolichowki, Gachibowli Restaurants",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-uncovered-at-restaurants-in-tolichowki-gachibowli-areas-of-hyderabad-6058155"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "head-quarters-rest-o-bar-somajiguda",
+      "name": "Head Quarters Rest-o-Bar",
+      "area": "Somajiguda",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-21",
+          "dateLabel": "21 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Food discarded / violations",
+          "findings": "Synthetic colours and unlabelled foods; improper storage and missing documents/PPE.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Multiple Restaurants And Eating Joints In Hyderabad Raided",
+          "sourceUrl": "https://food.ndtv.com/news/restaurants-bakeries-and-more-in-hyderabad-raided-expired-items-and-serious-food-safety-issues-uncovered-5726589"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "heart-cup-coffee-restaurant-and-bar-jubilee-hills",
+      "name": "Heart Cup Coffee Restaurant and Bar",
+      "area": "Jubilee Hills",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-13",
+          "dateLabel": "13 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / serious violations",
+          "findings": "Cockroaches; poor raw-meat refrigeration; dirty floor/drains/exhaust; expired products; spoiled vegetables.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Unsafe food found in Jubilee Hills",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-many-kilos-of-unsafe-food-found-in-jubilee-hills-area-7276149"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-amrutha-castle-khairatabad",
+      "name": "Hotel Amrutha Castle",
+      "area": "Khairatabad",
+      "restaurantType": "Hotel restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-25",
+          "dateLabel": "25 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Licence not displayed; no fridge-temperature records; PPE/labelling/cockroach/flooring/stagnation issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Khairatabad inspections uncover synthetic colours and hygiene issues",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-synthetic-food-colours-found-at-3-restaurants-in-hyderabads-khairatabad-area-inspections-uncover-6670415"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-ashoka-lakdikapul",
+      "name": "Hotel Ashoka",
+      "area": "Lakdikapul",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-02-03",
+          "dateLabel": "3 Feb 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired/spoiled food discarded / serious violations",
+          "findings": "Cockroaches; rusty utensils/refrigerator vessels; synthetic colours; rotten/expired food reported.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Cockroaches, expired food found in Hyderabad restaurants",
+          "sourceUrl": "https://timesofindia.indiatimes.com/city/hyderabad/cockroaches-expired-food-found-in-hyderabad-restaurants/articleshow/117910831.cms"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-fiza-and-bakers-bahadurpura",
+      "name": "Hotel Fiza and Bakers",
+      "area": "Bahadurpura",
+      "restaurantType": "Restaurant / bakery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-07",
+          "dateLabel": "7 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Missing records; PPE gaps; cockroaches; inadequate pest-proofing.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Inspections Around Nehru Zoological Park",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-inspections-conducted-at-food-establishments-around-hyderabad-s-famous-nehru-zoological-park-6765881"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-rumaan-tolichowki",
+      "name": "Hotel Rumaan",
+      "area": "Tolichowki",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-03",
+          "dateLabel": "3 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Open kitchen without insect-proof screens; uncovered/unlabelled refrigerator food; floor/ceiling issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Uncovered At Tolichowki, Gachibowli Restaurants",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-uncovered-at-restaurants-in-tolichowki-gachibowli-areas-of-hyderabad-6058155"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-sandarshini-secunderabad",
+      "name": "Hotel Sandarshini",
+      "area": "Secunderabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-06-18",
+          "dateLabel": "18 Jun 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Labelling and expired-food issues; refrigerator items inadequately labelled.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "CFS to file case against eatery in Secunderabad",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2024/Jun/21/commissioner-of-food-safety-to-file-case-against-eatery-in-secunderabad-for-obstructing-task-force-team"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-sri-raghavendra-udupi-santosh-nagar",
+      "name": "Hotel Sri Raghavendra Udupi",
+      "area": "Santosh Nagar",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-11-02",
+          "dateLabel": "2 Nov 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Water stagnation; unhygienic refrigerators; cockroaches; open bins; fungal ginger; slippery floor.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Santosh Nagar inspections",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-inspections-conducted-in-santosh-nagar-in-hyderabad-multiple-violations-flagged-6962682"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-sukha-sagar-veg-restaurant-khairatabad",
+      "name": "Hotel Sukha Sagar Veg Restaurant",
+      "area": "Khairatabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-17",
+          "dateLabel": "17 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Labelling, kitchen pest-proofing and documentation lapses reported.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Raids conducted at top restaurants in Hyderabad",
+          "sourceUrl": "https://www.siasat.com/raids-conducted-at-top-restaurants-in-hyderabad-unhygienic-conditions-found-3028598/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-sweekar-santosh-nagar",
+      "name": "Hotel Sweekar",
+      "area": "Santosh Nagar",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-11-02",
+          "dateLabel": "2 Nov 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Cockroaches; expired parottas; floor storage; no bins/screens; stagnation/wall issues; PPE/licence/medical gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Santosh Nagar inspections",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-inspections-conducted-in-santosh-nagar-in-hyderabad-multiple-violations-flagged-6962682"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hotel-tulips-grand-turkayamjal-hayathnagar",
+      "name": "Hotel Tulips Grand",
+      "area": "Turkayamjal / Hayathnagar",
+      "restaurantType": "Restaurant / hotel",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-21",
+          "dateLabel": "21 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Spoiled food found / serious violations",
+          "findings": "96 kg spoiled meat reported; expired/infested food; poor drainage/open bins/reused oil and record gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Hotel Tulips Grand raid",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raid-96-kilos-of-spoiled-meat-found-at-hotel-tulips-grand-8022322"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "hoy-punjab-gachibowli",
+      "name": "Hoy Punjab",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-17",
+          "dateLabel": "17 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Food discarded / water seized",
+          "findings": "Overused oil/previous-day food discarded; ventilation/documentation problems; bottled water seized.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "More Gachibowli Restaurants Inspected",
+          "sourceUrl": "https://www.ndtv.com/food/more-restaurants-in-hyderabads-gachibowli-area-inspected-by-food-safety-officials-see-what-was-found-6371569"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ideal-kitchen-madhapur",
+      "name": "Ideal Kitchen",
+      "area": "Madhapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-27",
+          "dateLabel": "27 Jun 2026",
+          "dateExact": true,
+          "score": 67,
+          "outcome": "Improvement notice",
+          "findings": "Unwrapped batter/semi-prepared food; dead cockroaches in batter; insects in urad dal; missing medical/water reports.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Food safety raids at Hyderabad restaurants",
+          "sourceUrl": "https://food.ndtv.com/news/food-safety-raids-at-3-hyderabad-restaurants-find-dead-cockroaches-open-drains-and-more-11698072"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "indian-durbar-restaurant-narayanaguda",
+      "name": "Indian Durbar Restaurant",
+      "area": "Narayanaguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-02-03",
+          "dateLabel": "3 Feb 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / serious violations",
+          "findings": "Cockroaches; uncovered eggs; unlabelled food; rotten vegetables; mixed storage; synthetic colours/expired products.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Cockroaches, expired food found in Hyderabad restaurants",
+          "sourceUrl": "https://timesofindia.indiatimes.com/city/hyderabad/cockroaches-expired-food-found-in-hyderabad-restaurants/articleshow/117910831.cms"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "inox-food-outlet-gsm-mall-madeenaguda",
+      "name": "INOX food outlet",
+      "area": "GSM Mall, Madeenaguda",
+      "restaurantType": "Cinema food outlet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 85,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "isthara-babai-hotel-muthangi-orr",
+      "name": "Isthara Babai Hotel",
+      "area": "Muthangi / ORR",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-12",
+          "dateLabel": "12 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Expired products, rotten vegetables, synthetic colours, blocked drain/unlabelled food/no screens; licence not displayed.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Restaurant inspections near ORR Muthangi",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-issues-flagged-at-restaurants-near-orr-muthangi-7248634"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "itc-limited-cloud-kitchen-sr-nagar-ameerpet",
+      "name": "ITC Limited cloud kitchen",
+      "area": "SR Nagar / Ameerpet",
+      "restaurantType": "Cloud kitchen",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-06",
+          "dateLabel": "6 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Mostly compliant",
+          "findings": "Kitchen served ITC MasterChef, Sunfeast Baked Creations and Aashirwad Soul Creations; many compliance controls present.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Officials Inspect Cloud Kitchens In Ameerpet",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-officials-inspect-cloud-kitchens-in-hyderabads-ameerpet-area-6065495"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "itihas-restaurant-kphb-near-nexus-mall",
+      "name": "Itihas Restaurant",
+      "area": "KPHB, near Nexus Mall",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-07-16",
+          "dateLabel": "16 Jul 2026",
+          "dateExact": true,
+          "score": 94,
+          "outcome": "Minor recommendations",
+          "findings": "Strong compliance; no pests/stale/expired food; CMC recommended drain traps and random food testing.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Itihas and Kanchi Cafe inspections",
+          "sourceUrl": "https://www.siasat.com/minor-violations-found-at-itihas-kanchi-cafe-during-food-raids-3507954/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "jodhpur-mithai-ghar-begum-bazaar",
+      "name": "Jodhpur Mithai Ghar",
+      "area": "Begum Bazaar",
+      "restaurantType": "Sweet shop / eatery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-26",
+          "dateLabel": "26 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "PPE gaps; products lacked preparation/use-by dates/covers; records unavailable.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Violations Found In Begum Bazaar",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-multiple-food-safety-violations-found-in-hyderabads-begum-bazaar-6202095"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kakatiya-military-hotel-patancheru",
+      "name": "Kakatiya Military Hotel",
+      "area": "Patancheru",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-01",
+          "dateLabel": "1 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "No valid licence / violations",
+          "findings": "No valid licence; cockroaches/stagnation; unhygienic refrigerator; expired condiments.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Miyapur and Patancheru restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hygiene-lapses-unsafe-food-found-at-restaurants-in-miyapur-and-patancheruvu-near-hyderabad-6713276"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kake-di-hatti-pure-veg-restaurant-infinity-mall-madinaguda",
+      "name": "Kake Di Hatti Pure Veg Restaurant",
+      "area": "Infinity Mall, Madinaguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-07-04",
+          "dateLabel": "4 Jul 2026",
+          "dateExact": true,
+          "score": 72,
+          "outcome": "Improvement notice",
+          "findings": "Hygiene/storage/pest-control concerns reported; CMC score published in secondary coverage.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Four Cyberabad restaurants inspected",
+          "sourceUrl": "https://www.newindianexpress.com/cities/hyderabad/2026/Jul/05/cockroaches-rat-droppings-found-at-four-cyberabad-restaurants-during-inspections"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kamat-hotel-khairatabad",
+      "name": "Kamat Hotel",
+      "area": "Khairatabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-17",
+          "dateLabel": "17 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Seizure / violations",
+          "findings": "Unlabelled food products; food handlers lacked medical fitness certificates / protective gear.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Raids conducted at top restaurants in Hyderabad",
+          "sourceUrl": "https://www.siasat.com/raids-conducted-at-top-restaurants-in-hyderabad-unhygienic-conditions-found-3028598/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kanchi-cafe-puppalaguda-manikonda",
+      "name": "Kanchi Cafe",
+      "area": "Puppalaguda / Manikonda",
+      "restaurantType": "Cafe / restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-22",
+          "dateLabel": "22 Jun 2026",
+          "dateExact": true,
+          "score": 60,
+          "outcome": "Improvement notice",
+          "findings": "Open bins/flies; dust/stagnation; mouldy cauliflower; drain odour; unlabelled batter; cockroaches; record gaps. Score 56/94.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Kodikura and Kanchi Cafe inspections",
+          "sourceUrl": "https://hyderabadmail.com/cyberabad-food-safety-inspections-kodikura-kanchi-cafe-natural-aqua-june-2026/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kanchi-cafe-restaurant-ameya-heritage-foods-nallagandla",
+      "name": "Kanchi Cafe Restaurant (Ameya Heritage Foods)",
+      "area": "Nallagandla",
+      "restaurantType": "Cafe / restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-07-16",
+          "dateLabel": "16 Jul 2026",
+          "dateExact": true,
+          "score": 92,
+          "outcome": "Minor corrective action",
+          "findings": "Generally good practices; corroded chopping boards/unlabelled idli batter; medical certificates not maintained.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Itihas and Kanchi Cafe inspections",
+          "sourceUrl": "https://www.siasat.com/minor-violations-found-at-itihas-kanchi-cafe-during-food-raids-3507954/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kanuma-restaurant-dlf-food-street-gachibowli",
+      "name": "Kanuma Restaurant",
+      "area": "DLF Food Street / Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-14",
+          "dateLabel": "14 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Missing documents/screens, open bins, unlabelled food, expired noodles/colours.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations In And Around DLF Foodstreet",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-violations-found-in-and-around-dlf-foodstreet-gachibowli-6349007"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kayal-kerala-restaurant-dlf-food-street-gachibowli",
+      "name": "Kayal Kerala Restaurant",
+      "area": "DLF Food Street / Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-14",
+          "dateLabel": "14 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired licence / violations",
+          "findings": "Expired licence, damaged vegetables, cockroaches, floor storage and unlabelled food.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations In And Around DLF Foodstreet",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-violations-found-in-and-around-dlf-foodstreet-gachibowli-6349007"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kfc-devyani-india-pvt-ltd-nizampet",
+      "name": "KFC (Devyani India Pvt Ltd)",
+      "area": "Nizampet",
+      "restaurantType": "QSR",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-20",
+          "dateLabel": "20 Jun 2026",
+          "dateExact": true,
+          "score": 86,
+          "outcome": "Improvement notice",
+          "findings": "Used-oil TPC above limit; raw chicken labelling and record/segregation issues; licence issue reported.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "KFC and Pancha Kattu Dosa food raids",
+          "sourceUrl": "https://www.siasat.com/hyderabad-food-raids-at-kfc-pancha-kattu-dosa-find-hygiene-lapses-3493255/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kfc-yum-restaurant-india-pvt-ltd-somajiguda",
+      "name": "KFC (Yum Restaurant India Pvt Ltd)",
+      "area": "Somajiguda",
+      "restaurantType": "QSR",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-21",
+          "dateLabel": "21 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Compliance issue",
+          "findings": "FSSAI licence copy not prominently displayed.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Multiple Restaurants And Eating Joints In Hyderabad Raided",
+          "sourceUrl": "https://food.ndtv.com/news/restaurants-bakeries-and-more-in-hyderabad-raided-expired-items-and-serious-food-safety-issues-uncovered-5726589"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "khan-e-khas-lakdikapul",
+      "name": "Khan-E-Khas",
+      "area": "Lakdikapul",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-11-26",
+          "dateLabel": "26 Nov 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "No valid licence / serious violations",
+          "findings": "No valid licence/records; leftovers discarded; veg/non-veg mixed; pest infestation.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Major violations at Lakdikapul eateries",
+          "sourceUrl": "https://telanganatoday.com/food-safety-teams-detect-major-violations-in-eateries-at-lakdikapul"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kishkinda-kitchen-kake-di-hatti-road-no-36-jubilee-hills",
+      "name": "Kishkinda Kitchen (Kake Di Hatti)",
+      "area": "Road No. 36, Jubilee Hills",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-02-01",
+          "dateLabel": "1 Feb 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / serious violations",
+          "findings": "Rat faeces, live cockroaches, dirty refrigerators/drains, spoiled vegetables, mixed storage and PPE gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Kake Di Hatti and PoshNosh Lounge inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-violations-found-at-kake-di-hatti-and-poshnosh-lounge-in-jubilee-hills-7622008"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kodikura-chittigare-miyapur",
+      "name": "Kodikura Chittigare",
+      "area": "Miyapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-30",
+          "dateLabel": "30 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Pest/water-analysis/pest-screen and housefly issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Miyapur and Patancheru restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hygiene-lapses-unsafe-food-found-at-restaurants-in-miyapur-and-patancheruvu-near-hyderabad-6713276"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kodikura-chittigare-nallagandla",
+      "name": "Kodikura Chittigare",
+      "area": "Nallagandla",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-22",
+          "dateLabel": "22 Jun 2026",
+          "dateExact": true,
+          "score": 62,
+          "outcome": "Improvement notice",
+          "findings": "Unlabelled raw chicken/desserts/pulp discarded; no cooking-water report; overloaded chiller; drain/hygiene and record issues. Score 60/98.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Kodikura and Kanchi Cafe inspections",
+          "sourceUrl": "https://hyderabadmail.com/cyberabad-food-safety-inspections-kodikura-kanchi-cafe-natural-aqua-june-2026/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "krithunga-train-restaurant-habsiguda",
+      "name": "Krithunga Train Restaurant",
+      "area": "Habsiguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-03",
+          "dateLabel": "3 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Spoiled food discarded / violations",
+          "findings": "Unclean fridge/open bins; veg/non-veg storage issues; fungal groundnuts; missing training/medical documents.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Habsiguda restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-continue-heres-what-was-found-in-and-around-habsiguda-6507092"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kritunga-the-palegar-s-cuisine-somajiguda",
+      "name": "Kritunga - The Palegar's Cuisine",
+      "area": "Somajiguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-21",
+          "dateLabel": "21 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Food discarded / water seized",
+          "findings": "Expired paste, improperly labelled paneer, low-TDS packaged water, missing PPE/medical certificates.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Multiple Restaurants And Eating Joints In Hyderabad Raided",
+          "sourceUrl": "https://food.ndtv.com/news/restaurants-bakeries-and-more-in-hyderabad-raided-expired-items-and-serious-food-safety-issues-uncovered-5726589"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ks-bakers-kukatpally",
+      "name": "KS Bakers",
+      "area": "Kukatpally",
+      "restaurantType": "Bakery / cafe",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-27",
+          "dateLabel": "27 Jun 2026",
+          "dateExact": true,
+          "score": 82,
+          "outcome": "Improvement notice",
+          "findings": "Cockroaches, poor veg/non-veg freezer segregation, rusted ovens and dirty storage; several compliance controls otherwise maintained.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "KS Bakers inspection",
+          "sourceUrl": "https://www.siasat.com/hyderabad-food-raids-at-ks-bakers-find-cockroaches-rusted-ovens-3497025/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "kshatriya-foods-kavuri-hills-madhapur",
+      "name": "Kshatriya Foods",
+      "area": "Kavuri Hills, Madhapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-21",
+          "dateLabel": "21 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Dirty/broken floor, stagnation, greasy chimneys, clogged drains/food waste, flies, dirty fridge, mixed veg/non-veg, synthetic colours.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Madhapur/Gachibowli inspections",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-issues-flagged-at-restaurants-in-madhapur-and-gachibowli-areas-of-hyderabad-7996931"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "la-pino-z-pizza-jubilee-enclave",
+      "name": "La Pino'z Pizza",
+      "area": "Jubilee Enclave",
+      "restaurantType": "Pizzeria",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 67,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "la-vie-en-rose-cafe-indira-nagar-gachibowli",
+      "name": "La Vie En Rose Cafe",
+      "area": "Indira Nagar / Gachibowli",
+      "restaurantType": "Cafe",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-19",
+          "dateLabel": "19 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "No insect screens; slippery floor; unlabelled raw material; flaking paint; used-oil monitoring issue.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Gachibowli restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-continue-heres-what-was-flagged-in-gachibowli-7333820"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "labonel-fine-baking-banjara-hills",
+      "name": "Labonel Fine Baking",
+      "area": "Banjara Hills",
+      "restaurantType": "Bakery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-22",
+          "dateLabel": "22 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired goods discarded / seizure",
+          "findings": "Expired chocolate product; imported vinegar labelling/importer issues; medical-fitness certification issue.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Multiple Restaurants And Eating Joints In Hyderabad Raided",
+          "sourceUrl": "https://food.ndtv.com/news/restaurants-bakeries-and-more-in-hyderabad-raided-expired-items-and-serious-food-safety-issues-uncovered-5726589"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "lebanese-bites-masab-tank",
+      "name": "Lebanese Bites",
+      "area": "Masab Tank",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-24",
+          "dateLabel": "24 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Synthetic colours; storage/labelling/PPE/documentation and pest-proofing lapses.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations At More Telangana Restaurants",
+          "sourceUrl": "https://www.ndtv.com/food/from-taaza-all-day-breakfast-to-chichas-asli-hyderabadi-khana-food-safety-violations-at-more-telangana-restaurants-5762691"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "makau-kitchen-and-bar-jubilee-hills",
+      "name": "Makau Kitchen and Bar",
+      "area": "Jubilee Hills",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-16",
+          "dateLabel": "16 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Expired food/sauces; fungus-affected cashews; veg/non-veg storage issues; live cockroaches; broken tiles.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Jubilee Hills restaurants found flouting hygiene norms",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2024/May/17/jubilee-hills-restaurants-found-flouting-hygiene-norms"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "malnadu-kitchen-kompally",
+      "name": "Malnadu Kitchen",
+      "area": "Kompally",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-30",
+          "dateLabel": "30 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Serious violations",
+          "findings": "Licence/document gaps; raw meat dumping; rodent excreta; dirty fridge/floors; synthetic colours; poor segregation.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Kompally restaurant inspections",
+          "sourceUrl": "https://food.ndtv.com/news/from-harmful-chemicals-to-rodent-excreta-hyderabad-restaurant-inspections-uncover-shocking-food-safety-violations-7392139"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "manam-chocolate-karkhana-banjara-hills",
+      "name": "Manam Chocolate Karkhana",
+      "area": "Banjara Hills",
+      "restaurantType": "Cafe / chocolate outlet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-22",
+          "dateLabel": "22 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Compliant",
+          "findings": "Officials reported the FBO was complying with FSSAI regulations.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Multiple Restaurants And Eating Joints In Hyderabad Raided",
+          "sourceUrl": "https://food.ndtv.com/news/restaurants-bakeries-and-more-in-hyderabad-raided-expired-items-and-serious-food-safety-issues-uncovered-5726589"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mandi-36-arabian-kitchen-banjara-hills",
+      "name": "Mandi 36 Arabian Kitchen",
+      "area": "Banjara Hills",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-21",
+          "dateLabel": "21 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "No FoSTaC; patchy floor/sooty ceiling/greasy chimneys; no insect mesh; spoiled vegetables; floor storage.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Mandi restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-mandi-restaurants-in-hyderabad-8005948"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mandi-king-gachibowli",
+      "name": "Mandi King",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-07-04",
+          "dateLabel": "4 Jul 2026",
+          "dateExact": true,
+          "score": 52,
+          "outcome": "Improvement notice",
+          "findings": "Raw/cooked non-veg together; repeatedly reused oil; fly infestation; dirty/slippery floors; greasy exhaust; no hot-water sanitation.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Four Cyberabad restaurants inspected",
+          "sourceUrl": "https://www.newindianexpress.com/cities/hyderabad/2026/Jul/05/cockroaches-rat-droppings-found-at-four-cyberabad-restaurants-during-inspections"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mandi-king-royale-khairatabad",
+      "name": "Mandi King Royale",
+      "area": "Khairatabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-21",
+          "dateLabel": "21 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Licence/record gaps, dirty/broken fridge, condensation on uncovered food, clogged drains, greasy chimney, rusty knives, mixed storage.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Mandi restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-mandi-restaurants-in-hyderabad-8005948"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mandi-town-khairatabad",
+      "name": "Mandi Town",
+      "area": "Khairatabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-21",
+          "dateLabel": "21 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Serious violations",
+          "findings": "Cockroaches; dirty refrigerator with meat/blood spillage; contaminated water tank; synthetic colours; records missing.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Mandi restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-mandi-restaurants-in-hyderabad-8005948"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mandi-dlf-dlf-food-street-gachibowli",
+      "name": "Mandi@DLF",
+      "area": "DLF Food Street / Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-14",
+          "dateLabel": "14 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Medical/PPE/cleaning segregation/pest-screen/labelling and synthetic-colour issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations In And Around DLF Foodstreet",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-violations-found-in-and-around-dlf-foodstreet-gachibowli-6349007"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "masterchef-restaurant-uppal-cross-road",
+      "name": "MasterChef Restaurant",
+      "area": "Uppal Cross Road",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2026-07-01",
+          "dateLabel": "1 Jul 2026",
+          "dateExact": true,
+          "score": null,
+          "outcome": "\u20b925,000 penalty + notice",
+          "findings": "Houseflies/cockroaches; uncovered/non-veg food storage; no fridge-temperature/pest records; poor hygiene/open bins.",
+          "authority": "Malkajgiri Municipal Corporation / Food Safety Wing",
+          "sourceTitle": "MMC fines MasterChef Restaurant",
+          "sourceUrl": "https://telanganatoday.com/mmc-imposes-a-penalty-of-rs-25000-against-restaurant-for-violations-of-food-safety-norms"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mehfil-biryani-darbar-kacheguda",
+      "name": "Mehfil Biryani Darbar",
+      "area": "Kacheguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-17",
+          "dateLabel": "17 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Patchy floors/stagnation; clogged drains; greasy walls/exhaust; poor fridge/labelling/storage; missing records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Kacheguda hygiene and storage issues",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-problems-with-hygiene-and-food-storage-flagged-in-kacheguda-7283535"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mehfil-restaurant-hitec-city",
+      "name": "Mehfil Restaurant",
+      "area": "HITEC City",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-27",
+          "dateLabel": "27 Jun 2026",
+          "dateExact": true,
+          "score": 67,
+          "outcome": "Improvement notice",
+          "findings": "Inadequate kitchen space; wet floors/food accumulation; roomali roti prepared in active construction area; medical certs missing.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Food safety raids at Hyderabad restaurants",
+          "sourceUrl": "https://food.ndtv.com/news/food-safety-raids-at-3-hyderabad-restaurants-find-dead-cockroaches-open-drains-and-more-11698072"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "meld-house-nagole",
+      "name": "Meld House",
+      "area": "Nagole",
+      "restaurantType": "Brewery / restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2026-05-20",
+          "dateLabel": "20 May 2026",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Enforcement samples / action initiated",
+          "findings": "Pest infestation; expired/mislabelled food; improper storage; suspected reused oil; poor sanitation.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Nagole food-safety inspections",
+          "sourceUrl": "https://food.ndtv.com/news/750-rotten-eggs-expired-food-seized-in-telangana-over-hygiene-violations-11526356"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "milan-juice-centre-dlf-gachibowli",
+      "name": "Milan Juice Centre",
+      "area": "DLF / Gachibowli",
+      "restaurantType": "Juice / snack outlet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-27",
+          "dateLabel": "27 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Spoiled/expired food discarded / violations",
+          "findings": "Unlabelled/uncovered food, food waste/open bins, flies/cockroaches, PPE gaps; spoiled fruits and expired syrups discarded.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "DLF food-joint inspections",
+          "sourceUrl": "https://telanganatoday.com/hyderabad-food-safety-officials-conduct-raids-at-dlf-detect-safety-violations-in-several-food-joints"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ming-ustad-hitec-city",
+      "name": "Ming Ustad",
+      "area": "HITEC City",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-27",
+          "dateLabel": "27 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Expired ingredients, mixed veg/non-veg storage, date-labelling/open-bin/PPE/licence-display issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Inspections At Restaurants In HITEC City",
+          "sourceUrl": "https://www.ndtv.com/food/inspections-at-restaurants-in-hyderabad-s-hitec-city-reveal-food-safety-violations-6220488"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mithaiwala-dilsukhnagar",
+      "name": "Mithaiwala",
+      "area": "Dilsukhnagar",
+      "restaurantType": "Sweet shop / eatery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-31",
+          "dateLabel": "31 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Stagnant drains, open bins/flies, expired items, licence display and pest-screen issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Dilsukhnagar inspection updates",
+          "sourceUrl": "https://www.ndtv.com/food/129-telangana-government-hostels-inspected-for-food-safety-these-violations-were-found-6472989"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "moon-bean-restaurant-bar-malakpet",
+      "name": "Moon Bean Restaurant & Bar",
+      "area": "Malakpet",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-09",
+          "dateLabel": "9 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired goods discarded / violations",
+          "findings": "Expired licence and products; synthetic colours; cockroaches; open bins; missing records/PPE.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Malakpet And Dilsukhnagar",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-malakpet-and-dilsukhnagar-in-hyderabad-6320341"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "mubarak-arabian-mandi-house-kacheguda",
+      "name": "Mubarak Arabian Mandi House",
+      "area": "Kacheguda",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-17",
+          "dateLabel": "17 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Missing records; synthetic colours; raw chicken near drain; dirty PPE/bins/no screens; fridge segregation/stagnation issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Kacheguda hygiene and storage issues",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-problems-with-hygiene-and-food-storage-flagged-in-kacheguda-7283535"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "nandini-cafeteria-mgbs-imlibun",
+      "name": "Nandini Cafeteria",
+      "area": "MGBS, Imlibun",
+      "restaurantType": "Cafeteria",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-10",
+          "dateLabel": "10 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Patchy floor/stagnation; pest-screen/toilet, pickle, refrigerator-labelling/PPE/storage issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Outlets At MGBS Violating Safety And Hygiene Regulations",
+          "sourceUrl": "https://food.ndtv.com/news/food-outlets-at-mg-bus-station-in-hyderabad-found-to-be-violating-safety-and-hygiene-regulations-6546650"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "naturals-icecream-jubilee-hills",
+      "name": "Naturals Icecream",
+      "area": "Jubilee Hills",
+      "restaurantType": "Ice cream outlet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-16",
+          "dateLabel": "16 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Labelling and documentation issues; FSSAI licence not displayed.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Jubilee Hills restaurants found flouting hygiene norms",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2024/May/17/jubilee-hills-restaurants-found-flouting-hygiene-norms"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "nawaabs-restaurant-anjaiah-nagar",
+      "name": "Nawaabs Restaurant",
+      "area": "Anjaiah Nagar",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-18",
+          "dateLabel": "18 Jun 2026",
+          "dateExact": true,
+          "score": 71,
+          "outcome": "Improvement notice",
+          "findings": "Stale meat/rice/noodles/chicken, poor floor/water/hot-water sanitation/freezer practices, missing records.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad food-safety drive - four eateries",
+          "sourceUrl": "https://hyderabadmail.com/cyberabad-food-safety-drive-finds-hygiene-violations-at-four-eateries/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "noodle-bar-dlf-food-street-gachibowli",
+      "name": "Noodle Bar",
+      "area": "DLF Food Street / Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-14",
+          "dateLabel": "14 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired licence / violations",
+          "findings": "Expired licence, missing records, unhygienic refrigerators and pest-proofing gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations In And Around DLF Foodstreet",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-violations-found-in-and-around-dlf-foodstreet-gachibowli-6349007"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "old-trees-cafe-ots-kandlakoya-medchal",
+      "name": "Old Trees Cafe (OTS)",
+      "area": "Kandlakoya, Medchal",
+      "restaurantType": "Cafe",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-07-03",
+          "dateLabel": "3 Jul 2026",
+          "dateExact": true,
+          "score": 82,
+          "outcome": "Improvement direction",
+          "findings": "Expired sweet sauce/curry paste; medical certificates/water report missing; uncovered bins.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Food safety violations at Cyberabad establishments",
+          "sourceUrl": "https://dairynews.today/global/news/food_safety_violations_detected_at_three_establishments_in_cyberabad_9248891.html"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "palamuru-grill-bar-and-restaurant-near-kondapur-rto",
+      "name": "Palamuru Grill Bar and Restaurant",
+      "area": "Near Kondapur RTO",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-27",
+          "dateLabel": "27 Jun 2026",
+          "dateExact": true,
+          "score": 60,
+          "outcome": "Improvement notice",
+          "findings": "Label tampering; stale/expired food discarded; flies/grease/dirt; rusted freezer/stagnation; no hot-water sanitation.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Three Cyberabad eateries found unhygienic",
+          "sourceUrl": "https://www.newindianexpress.com/cities/hyderabad/2026/Jun/28/three-cyberabad-eateries-found-unhygienic"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "pancha-kattu-dosa-nizampet",
+      "name": "Pancha Kattu Dosa",
+      "area": "Nizampet",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-20",
+          "dateLabel": "20 Jun 2026",
+          "dateExact": true,
+          "score": 67,
+          "outcome": "Improvement notice",
+          "findings": "Greasy chimney; broken tiles/slippery floor; unlabelled foods; floor storage; medical/water reports unavailable.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "KFC and Pancha Kattu Dosa food raids",
+          "sourceUrl": "https://www.siasat.com/hyderabad-food-raids-at-kfc-pancha-kattu-dosa-find-hygiene-lapses-3493255/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "papadams-blue-restaurant-and-banquet-hall-dilsukhnagar",
+      "name": "Papadams Blue Restaurant and Banquet Hall",
+      "area": "Dilsukhnagar",
+      "restaurantType": "Restaurant / banquet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-31",
+          "dateLabel": "31 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Cockroach infestation, expired flavouring agents/fruit fillings, synthetic colours, missing records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Dilsukhnagar inspection updates",
+          "sourceUrl": "https://www.ndtv.com/food/129-telangana-government-hostels-inspected-for-food-safety-these-violations-were-found-6472989"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "paradise-food-court-masab-tank",
+      "name": "Paradise Food Court",
+      "area": "Masab Tank",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-24",
+          "dateLabel": "24 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Mostly compliant; water sample collected",
+          "findings": "Licence/PPE/labels/pest records were in place; packaged-water sample sent for analysis.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations At More Telangana Restaurants",
+          "sourceUrl": "https://www.ndtv.com/food/from-taaza-all-day-breakfast-to-chichas-asli-hyderabadi-khana-food-safety-violations-at-more-telangana-restaurants-5762691"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "park-bakers-peerzadiguda",
+      "name": "Park Bakers",
+      "area": "Peerzadiguda",
+      "restaurantType": "Bakery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-11",
+          "dateLabel": "11 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Case proposed / sample collected",
+          "findings": "Cockroaches/cobwebs; unlabelled food; expired syrups; PPE and required-report gaps; cake sample collected.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Peerzadiguda food-establishment inspections",
+          "sourceUrl": "https://www.ndtv.com/food/task-force-inspects-food-establishments-in-hyderabad-s-peerzadiguda-area-discovers-violations-6557227"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "platform-65-pnr-empire-kukatpally",
+      "name": "Platform 65",
+      "area": "PNR Empire, Kukatpally",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-23",
+          "dateLabel": "23 Jun 2026",
+          "dateExact": true,
+          "score": 37,
+          "outcome": "FSSAI licence suspension recommended",
+          "findings": "Rats; clogged drains with food particles; open bins; stale/freezer food; poorly maintained freezers/uncovered food. Score 40/110.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "CMC recommends suspension of Platform 65 licence",
+          "sourceUrl": "https://timesofindia.indiatimes.com/city/hyderabad/cmc-recommends-suspension-of-platform-65s-fssai-licence-after-major-hygiene-violations/amp_articleshow/131948494.cms"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "poshnosh-lounge-bar-road-no-36-jubilee-hills",
+      "name": "PoshNosh Lounge & Bar",
+      "area": "Road No. 36, Jubilee Hills",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-02-01",
+          "dateLabel": "1 Feb 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired licence / expired food discarded",
+          "findings": "Expired licence and several expired/misbranded products; storage/segregation/drain/pest-screen issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Kake Di Hatti and PoshNosh Lounge inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-violations-found-at-kake-di-hatti-and-poshnosh-lounge-in-jubilee-hills-7622008"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "protein-chef-cyberabad-locality-not-stated",
+      "name": "Protein Chef",
+      "area": "Cyberabad (locality not stated)",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 65,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "raj-bar-and-restaurant-secunderabad",
+      "name": "Raj Bar and Restaurant",
+      "area": "Secunderabad",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-06-18",
+          "dateLabel": "18 Jun 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Serious violations",
+          "findings": "Expired displayed licence; rat observed; synthetic colours; open bins; records/PPE missing.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "CFS to file case against eatery in Secunderabad",
+          "sourceUrl": "https://www.newindianexpress.com/states/telangana/2024/Jun/21/commissioner-of-food-safety-to-file-case-against-eatery-in-secunderabad-for-obstructing-task-force-team"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "raja-deluxe-restaurant-banjara-hills",
+      "name": "Raja Deluxe Restaurant",
+      "area": "Banjara Hills",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-02",
+          "dateLabel": "2 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Floor/drain/pest-screen, synthetic-colour/open-bin, meat-fridge, segregation and FoSTaC issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Banjara Hills food-safety inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-task-force-finds-food-safety-violations-in-hyderabads-banjara-hills-6486622"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "rasa-foods-sainikpuri",
+      "name": "Rasa Foods",
+      "area": "Sainikpuri",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-30",
+          "dateLabel": "30 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Expired baby corn; unlabelled fridge food; cluttered store/open bins; no screens; water report unavailable.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Violations Found At Restaurants In Sainikpuri",
+          "sourceUrl": "https://www.ndtv.com/food/expired-items-synthetic-food-colours-and-more-found-at-restaurants-in-sainikpuri-6465138"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "rayalaseema-ruchulu-lakdikapul",
+      "name": "Rayalaseema Ruchulu",
+      "area": "Lakdikapul",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-18",
+          "dateLabel": "18 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Food discarded / violations",
+          "findings": "Infested flour/tamarind and expired milk; drainage/pest-proofing and labelling lapses.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Raids conducted at top restaurants in Hyderabad",
+          "sourceUrl": "https://www.siasat.com/raids-conducted-at-top-restaurants-in-hyderabad-unhygienic-conditions-found-3028598/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "rebel-foods-private-limited-sr-nagar-ameerpet",
+      "name": "Rebel Foods Private Limited",
+      "area": "SR Nagar / Ameerpet",
+      "restaurantType": "Cloud kitchen",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-06",
+          "dateLabel": "6 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Expired ingredients; labelling and licence-display issues; other documentation largely available.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Officials Inspect Cloud Kitchens In Ameerpet",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-officials-inspect-cloud-kitchens-in-hyderabads-ameerpet-area-6065495"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "reliance-restaurant-and-bar-sainikpuri",
+      "name": "Reliance Restaurant and Bar",
+      "area": "Sainikpuri",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-30",
+          "dateLabel": "30 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Synthetic colours discarded / violations",
+          "findings": "Open drains/stagnant water; lidless bins; unlabelled fridge food; no insect screens.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Violations Found At Restaurants In Sainikpuri",
+          "sourceUrl": "https://www.ndtv.com/food/expired-items-synthetic-food-colours-and-more-found-at-restaurants-in-sainikpuri-6465138"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "rollzone-vidyanagar",
+      "name": "Rollzone",
+      "area": "Vidyanagar",
+      "restaurantType": "QSR",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-13",
+          "dateLabel": "13 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Licence not displayed; unlabelled refrigerator food; PPE issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Vidyanagar restaurant raids",
+          "sourceUrl": "https://food.ndtv.com/news/food-safety-board-exposes-hyderabad-eateries-for-violating-hygiene-norms-6569166"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "royal-spice-restaurant-gachibowli",
+      "name": "Royal Spice Restaurant",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-11",
+          "dateLabel": "11 Jun 2026",
+          "dateExact": true,
+          "score": 18,
+          "outcome": "Temporary closure / show-cause",
+          "findings": "Heavy pest infestation; stagnant water/foul odour; poor sanitation; excessive colours; no potable-water certification; open bins. Score 20/96.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Royal Spice Gachibowli shut",
+          "sourceUrl": "https://www.siasat.com/hyderabad-restaurant-in-gachibowli-shut-over-food-safety-violations-3487511/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "sahadeva-reddy-pure-ghee-sweets-dilsukhnagar",
+      "name": "Sahadeva Reddy Pure Ghee Sweets",
+      "area": "Dilsukhnagar",
+      "restaurantType": "Sweet shop",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-09",
+          "dateLabel": "9 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Food seized / violations",
+          "findings": "Packaged foods without date labels; chana dal seized over labelling issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Malakpet And Dilsukhnagar",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-malakpet-and-dilsukhnagar-in-hyderabad-6320341"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "sattibabu-biryani-near-kims-kondapur",
+      "name": "Sattibabu Biryani",
+      "area": "Near KIMS, Kondapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 92,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "secret-kitchen-padmarao-nagar",
+      "name": "Secret Kitchen",
+      "area": "Padmarao Nagar",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-20",
+          "dateLabel": "20 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Minor violations",
+          "findings": "No insect screen, drain clogging and missing medical-fitness certificates; several other standards met.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food safety officials raid restaurants in Secunderabad",
+          "sourceUrl": "https://www.siasat.com/food-safety-officials-raid-restaurants-in-secunderabad-3083188/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "seenaiah-kitchen-dlf-food-street-gachibowli",
+      "name": "Seenaiah Kitchen",
+      "area": "DLF Food Street / Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-14",
+          "dateLabel": "14 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Serious violations",
+          "findings": "Cockroaches, rat faeces, synthetic colours, expired paratha, uncovered/unlabelled food.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations In And Around DLF Foodstreet",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-violations-found-in-and-around-dlf-foodstreet-gachibowli-6349007"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "shah-ghouse-lakdikapul",
+      "name": "Shah Ghouse",
+      "area": "Lakdikapul",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-18",
+          "dateLabel": "18 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Sample collected / violations",
+          "findings": "Unlabelled prepared/semi-prepared food, missing records and water stagnation; sample collected.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Raids conducted at top restaurants in Hyderabad",
+          "sourceUrl": "https://www.siasat.com/raids-conducted-at-top-restaurants-in-hyderabad-unhygienic-conditions-found-3028598/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "shah-ghouse-biryani-restaurant-raidurg-gachibowli-road",
+      "name": "Shah Ghouse Biryani Restaurant",
+      "area": "Raidurg-Gachibowli Road",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-27",
+          "dateLabel": "27 Jun 2026",
+          "dateExact": true,
+          "score": 65,
+          "outcome": "Improvement notice",
+          "findings": "Gutka stains, flies, grease/dust, unhygienic non-veg cutting, open drains/food waste, dirty wash area, no water testing.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Three Cyberabad eateries found unhygienic",
+          "sourceUrl": "https://www.newindianexpress.com/cities/hyderabad/2026/Jun/28/three-cyberabad-eateries-found-unhygienic"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "shaheen-mandi-the-arabian-restaurant-bahadurpura",
+      "name": "Shaheen Mandi - The Arabian Restaurant",
+      "area": "Bahadurpura",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-07",
+          "dateLabel": "7 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Water stagnation; synthetic colours; PPE/segregation/labelling/records/licence-display issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Inspections Around Nehru Zoological Park",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-inspections-conducted-at-food-establishments-around-hyderabad-s-famous-nehru-zoological-park-6765881"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "shahi-dastarkhan-lakdikapul",
+      "name": "Shahi Dastarkhan",
+      "area": "Lakdikapul",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-11-26",
+          "dateLabel": "26 Nov 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Greasy walls/shedding ceiling; broken/slippery floors; stagnation; no insect screens; cockroaches.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Major violations at Lakdikapul eateries",
+          "sourceUrl": "https://telanganatoday.com/food-safety-teams-detect-major-violations-in-eateries-at-lakdikapul"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "shilpi-elite-restaurant-and-bar-chaitanyapuri",
+      "name": "Shilpi Elite Restaurant and Bar",
+      "area": "Chaitanyapuri",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-22",
+          "dateLabel": "22 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Licence/record gaps; greasy ceiling; unlabelled fridge food; rotten vegetables; cockroaches; PPE/segregation issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Major breaches at Hyderabad restaurants",
+          "sourceUrl": "https://food.ndtv.com/news/food-safety-team-uncovers-major-breaches-in-popular-hyderabad-restaurants-6863473"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "shyam-singh-chat-bhandar-begum-bazaar",
+      "name": "Shyam Singh Chat Bhandar",
+      "area": "Begum Bazaar",
+      "restaurantType": "Chaat / eatery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-26",
+          "dateLabel": "26 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Live rat infestation, flies/open bins, uncovered/unlabelled food, synthetic colours, licensing issue.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Violations Found In Begum Bazaar",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-multiple-food-safety-violations-found-in-hyderabads-begum-bazaar-6202095"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "silver-bawarchi-restaurant-bakers-patancheru",
+      "name": "Silver Bawarchi Restaurant & Bakers",
+      "area": "Patancheru",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-01",
+          "dateLabel": "1 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired goods discarded / violations",
+          "findings": "Unlabelled products, expired sauces/premix/vanilla, cockroaches, broken tiles/stagnation, missing records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Miyapur and Patancheru restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hygiene-lapses-unsafe-food-found-at-restaurants-in-miyapur-and-patancheruvu-near-hyderabad-6713276"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "simrat-s-dhaba-begum-bazaar",
+      "name": "Simrat's Dhaba",
+      "area": "Begum Bazaar",
+      "restaurantType": "Dhaba / restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-26",
+          "dateLabel": "26 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Food discarded / violations",
+          "findings": "Registration/licensing issue; no PPE/screens; open bins; greasy exhaust; unlabelled seasoning discarded.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Violations Found In Begum Bazaar",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-multiple-food-safety-violations-found-in-hyderabads-begum-bazaar-6202095"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "sip-and-snack-dlf-gachibowli",
+      "name": "Sip and Snack",
+      "area": "DLF / Gachibowli",
+      "restaurantType": "Juice / snack outlet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-27",
+          "dateLabel": "27 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Spoiled food discarded / violations",
+          "findings": "FSSAI licence unavailable; uncovered food; spoiled fruit; food waste/open bins; housefly infestation.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "DLF food-joint inspections",
+          "sourceUrl": "https://telanganatoday.com/hyderabad-food-safety-officials-conduct-raids-at-dlf-detect-safety-violations-in-several-food-joints"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "stall-no-24-mg-bus-station-mgbs-imlibun",
+      "name": "Stall No. 24, MG Bus Station",
+      "area": "MGBS, Imlibun",
+      "restaurantType": "Food stall",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-10",
+          "dateLabel": "10 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "No FSSAI licence / serious violations",
+          "findings": "No licence/records; highly unhygienic kitchen; overflowing bins/flies/cobwebs; synthetic colours.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Outlets At MGBS Violating Safety And Hygiene Regulations",
+          "sourceUrl": "https://food.ndtv.com/news/food-outlets-at-mg-bus-station-in-hyderabad-found-to-be-violating-safety-and-hygiene-regulations-6546650"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "subbayya-gari-hotel-kondapur-gachibowli-road",
+      "name": "Subbayya Gari Hotel",
+      "area": "Kondapur / Gachibowli Road",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-20",
+          "dateLabel": "20 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Sample collected / serious violations",
+          "findings": "Very unhygienic kitchen; clogged drains/food waste; greasy exhaust, dirty equipment, poor storeroom; missing records; used-oil sample.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Madhapur/Gachibowli inspections",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-issues-flagged-at-restaurants-in-madhapur-and-gachibowli-areas-of-hyderabad-7996931"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "subway-vidyanagar",
+      "name": "Subway",
+      "area": "Vidyanagar",
+      "restaurantType": "QSR",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-13",
+          "dateLabel": "13 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Semi-prepared/ready-to-cook food lacked labels/use-by dates; storage spacing and FoSTaC issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Vidyanagar restaurant raids",
+          "sourceUrl": "https://food.ndtv.com/news/food-safety-board-exposes-hyderabad-eateries-for-violating-hygiene-norms-6569166"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "subway-cyberabad-locality-not-stated",
+      "name": "Subway",
+      "area": "Cyberabad (locality not stated)",
+      "restaurantType": "QSR",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 60,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "swagruha-foods-gajularamaram",
+      "name": "Swagruha Foods",
+      "area": "Gajularamaram",
+      "restaurantType": "Food outlet",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 54,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "sweekar-hotel-kachiguda-x-roads",
+      "name": "Sweekar Hotel",
+      "area": "Kachiguda X Roads",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2026-07-26",
+          "dateLabel": "26 Jul 2026",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Action initiated",
+          "findings": "Fungal/rotten vegetables; houseflies; poor sanitation; uncovered/unlabelled food; mixed raw/semi-prepared storage; records missing.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Sweekar Hotel inspection",
+          "sourceUrl": "https://www.deccanchronicle.com/amp/southern-states/telangana/fungal-vegetables-unhygienic-kitchen-found-at-sweekar-hotel-in-kacheguda-1974085"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "taaza-kitchen-ameerpet",
+      "name": "Taaza Kitchen",
+      "area": "Ameerpet",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-06",
+          "dateLabel": "6 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "PPE gaps, rusty knives, insect-infested flour, spoiled tomatoes, unlabelled food, open bins, poor refrigeration/storage.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Ameerpet restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-unhygienic-conditions-at-two-restaurants-in-ameerpet-area-7869585"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "tabula-rasa-nanakramguda",
+      "name": "Tabula Rasa",
+      "area": "Nanakramguda",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-01",
+          "dateLabel": "1 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Licence-display/document/PPE issues, flies/open bins, expired products.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Uncovered At Tolichowki, Gachibowli Restaurants",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-uncovered-at-restaurants-in-tolichowki-gachibowli-areas-of-hyderabad-6058155"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-arabian-mandi-sainikpuri",
+      "name": "The Arabian Mandi",
+      "area": "Sainikpuri",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-02-20",
+          "dateLabel": "20 Feb 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Action under FSS Act / serious violations",
+          "findings": "Cockroaches; synthetic colours; reused oil; banned raw-egg mayonnaise; week-old marinated chicken; dirty refrigerator/open bins.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "The Arabian Mandi inspection after complaint",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-task-force-takes-action-against-the-arabian-mandi-restaurant-in-hyderabad-after-receiving-complaint-7775229"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-avenue-bar-kitchen-sagar-x-road",
+      "name": "The Avenue Bar & Kitchen",
+      "area": "Sagar X Road",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-10",
+          "dateLabel": "10 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Pest-proofing, refrigerator-labelling and water-analysis-record issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Issues Near Sagar X Road",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-issues-flagged-at-restaurants-near-sagar-x-road-hyderabad-6792400"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-coffee-cup-next-galleria-mall-punjagutta",
+      "name": "The Coffee Cup",
+      "area": "Next Galleria Mall, Punjagutta",
+      "restaurantType": "Cafe",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-12",
+          "dateLabel": "12 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Expired shrimp/milk/chilli paste; PPE/labelling/open-bin issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Next Galleria Mall",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-next-galleria-mall-in-hyderabad-heres-what-you-should-know-6115892"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-food-planet-chandanagar-lingampally",
+      "name": "The Food Planet",
+      "area": "Chandanagar / Lingampally",
+      "restaurantType": "Restaurant / food court",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 51,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-globe-grub-gachibowli",
+      "name": "The Globe Grub",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-17",
+          "dateLabel": "17 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Open bins; uncovered/unlabelled fridge food; temperature records and mandatory reports missing.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "More Gachibowli Restaurants Inspected",
+          "sourceUrl": "https://www.ndtv.com/food/more-restaurants-in-hyderabads-gachibowli-area-inspected-by-food-safety-officials-see-what-was-found-6371569"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-majlis-culture-cuisine-attapur",
+      "name": "The Majlis Culture Cuisine",
+      "area": "Attapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-11-01",
+          "dateLabel": "1 Nov 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired goods discarded / violations",
+          "findings": "Expired syrups/crushes; synthetic colours; unlabelled/uncovered refrigerator food; pest-proofing gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Attapur food-safety inspection",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-officials-flag-violations-in-attapur-6940926"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-nawaabs-restaurant-gachibowli",
+      "name": "The Nawaabs Restaurant",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-19",
+          "dateLabel": "19 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Unlabelled food; rodent excreta; blocked drain/stagnation; open bins/screens and record gaps.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Gachibowli restaurant inspections",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-continue-heres-what-was-flagged-in-gachibowli-7333820"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-nosh-bistro-next-galleria-mall-punjagutta",
+      "name": "The Nosh Bistro",
+      "area": "Next Galleria Mall, Punjagutta",
+      "restaurantType": "Restaurant / cafe",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-12",
+          "dateLabel": "12 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Expired buns/paneer/curd; raw-item labelling and open-bin issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Next Galleria Mall",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-next-galleria-mall-in-hyderabad-heres-what-you-should-know-6115892"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-palace-2-muthangi-orr",
+      "name": "The Palace-2",
+      "area": "Muthangi / ORR",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-12",
+          "dateLabel": "12 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "No valid licence / violations",
+          "findings": "No valid licence/water analysis; synthetic colours; unlabelled food; poor segregation; open kitchen.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Restaurant inspections near ORR Muthangi",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-issues-flagged-at-restaurants-near-orr-muthangi-7248634"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-rameshwaram-cafe-madhapur",
+      "name": "The Rameshwaram Cafe",
+      "area": "Madhapur",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-05-23",
+          "dateLabel": "23 May 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired food discarded / violations",
+          "findings": "Expired urad dal, curd and milk; unlabelled food; open bins; missing medical certificates.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Expired Items, Unlabelled Food Found At The Rameshwaram Cafe",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurants-raids-expired-items-unlabelled-food-found-at-the-rameshwaram-cafe-in-hyderabad-5733395"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-rameshwaram-cafe-near-image-gardens",
+      "name": "The Rameshwaram Cafe",
+      "area": "Near Image Gardens",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 93,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-spice-kitchen-pnr-empire",
+      "name": "The Spice Kitchen",
+      "area": "PNR Empire",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-18",
+          "dateLabel": "18 Jun 2026",
+          "dateExact": true,
+          "score": 56,
+          "outcome": "Improvement notice",
+          "findings": "Heavy cockroaches/grain pests, stale freezer food, poor labelling/wrapping, raw chicken and mixed storage. Score 60/108.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad food-safety drive - four eateries",
+          "sourceUrl": "https://hyderabadmail.com/cyberabad-food-safety-drive-finds-hygiene-violations-at-four-eateries/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-spicy-beijing-next-galleria-mall-punjagutta",
+      "name": "The Spicy Beijing",
+      "area": "Next Galleria Mall, Punjagutta",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-12",
+          "dateLabel": "12 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Registration/licence-display/document/labelling/pest-proofing lapses.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Next Galleria Mall",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-next-galleria-mall-in-hyderabad-heres-what-you-should-know-6115892"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "the-tree-stories-sagar-x-road",
+      "name": "The Tree Stories",
+      "area": "Sagar X Road",
+      "restaurantType": "Cafe / restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-10",
+          "dateLabel": "10 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired licence / serious violations",
+          "findings": "Expired licence/food; rat faeces; unlabelled/uncovered refrigerator food; missing screens/records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Issues Near Sagar X Road",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-issues-flagged-at-restaurants-near-sagar-x-road-hyderabad-6792400"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "tipsy-topsy-bakers-dilsukhnagar",
+      "name": "Tipsy Topsy Bakers",
+      "area": "Dilsukhnagar",
+      "restaurantType": "Bakery",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-08-09",
+          "dateLabel": "9 Aug 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired/spoiled food discarded / violations",
+          "findings": "Expired biscuits; fungal cauliflower; unlabelled products; open bins; missing records/PPE.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Violations Found At Malakpet And Dilsukhnagar",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-violations-found-at-malakpet-and-dilsukhnagar-in-hyderabad-6320341"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "train-theme-restaurant-kompally",
+      "name": "Train Theme Restaurant",
+      "area": "Kompally",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-30",
+          "dateLabel": "30 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Patchy/slippery floors; food waste; clogged drains/stagnation; poor refrigerator hygiene; floor storage.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Kompally restaurant inspections",
+          "sourceUrl": "https://food.ndtv.com/news/from-harmful-chemicals-to-rodent-excreta-hyderabad-restaurant-inspections-uncover-shocking-food-safety-violations-7392139"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "udupi-s-upahar-moosapet",
+      "name": "Udupi's Upahar",
+      "area": "Moosapet",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-05-26",
+          "dateLabel": "26 May 2026",
+          "dateExact": true,
+          "score": 34.5,
+          "outcome": "Sealed / closure action",
+          "findings": "Expired food licence; cockroaches/flies; stale food; poor freezer storage; dirty kitchen; missing PPE/medical/water records. Score 40/116.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Udupi's Upahar sealed",
+          "sourceUrl": "https://food.ndtv.com/news/popular-hyderabad-restaurant-sealed-over-expired-license-and-hygiene-violations-11553213"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "ulavacharu-kompally",
+      "name": "Ulavacharu",
+      "area": "Kompally",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-12-30",
+          "dateLabel": "30 Dec 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Expired/misbranded goods seized / violations",
+          "findings": "Expired/misbranded products; rotten vegetables; synthetic colours; poor hygiene; inappropriate butter application tool.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Kompally restaurant inspections",
+          "sourceUrl": "https://food.ndtv.com/news/from-harmful-chemicals-to-rodent-excreta-hyderabad-restaurant-inspections-uncover-shocking-food-safety-violations-7392139"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "urban-maya-bazar-family-bar-kitchen-sagar-x-road",
+      "name": "Urban Maya Bazar - Family Bar & Kitchen",
+      "area": "Sagar X Road",
+      "restaurantType": "Restaurant / bar",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-10-09",
+          "dateLabel": "9 Oct 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Houseflies, poor pest-proofing, open bins, unlabelled food, synthetic colours, missing records/licence display.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Safety Issues Near Sagar X Road",
+          "sourceUrl": "https://www.ndtv.com/food/hyderabad-restaurant-raids-food-safety-issues-flagged-at-restaurants-near-sagar-x-road-hyderabad-6792400"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "urban-monk-fine-baking-nagole",
+      "name": "Urban Monk Fine Baking",
+      "area": "Nagole",
+      "restaurantType": "Bakery / cafe",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2026-05-20",
+          "dateLabel": "20 May 2026",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Enforcement samples / action initiated",
+          "findings": "Pest infestation; expired/mislabelled food; improper storage; suspected reused oil; poor sanitation.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Nagole food-safety inspections",
+          "sourceUrl": "https://food.ndtv.com/news/750-rotten-eggs-expired-food-seized-in-telangana-over-hygiene-violations-11526356"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "varalakshmi-tiffins-gachibowli",
+      "name": "Varalakshmi Tiffins",
+      "area": "Gachibowli",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2025-03-21",
+          "dateLabel": "21 Mar 2025",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Clogged drains/stagnation, rats outside, no rodent traps, dirty walls/floor, greasy exhaust, open bins and broken utensils.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Madhapur/Gachibowli inspections",
+          "sourceUrl": "https://www.ndtv.com/food/food-safety-issues-flagged-at-restaurants-in-madhapur-and-gachibowli-areas-of-hyderabad-7996931"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "vennela-food-court-vennela-bakers-and-chinese-saroornagar",
+      "name": "Vennela Food Court (Vennela Bakers and Chinese)",
+      "area": "Saroornagar",
+      "restaurantType": "Food court / restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2026-07-27",
+          "dateLabel": "27 Jul 2026",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Action initiated",
+          "findings": "Operating without FSSAI licence; food near drains/newspapers; broken eggs; poor personal/kitchen hygiene; missing medical/pest records.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Vennela Food Court inspection",
+          "sourceUrl": "https://www.siasat.com/food-stored-near-drains-broken-eggs-found-at-saroornagar-food-court-3514613/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "vivaha-bhojanambu-secunderabad",
+      "name": "Vivaha Bhojanambu",
+      "area": "Secunderabad",
+      "restaurantType": "Restaurant",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-07-08",
+          "dateLabel": "8 Jul 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Food discarded / violations",
+          "findings": "Old rice stock, synthetic-colour food, unlabelled storage, water stagnation and missing reports.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Vivaha Bhojanambu restaurant inspection",
+          "sourceUrl": "https://hyderabadmail.com/sundeep-kishan-vivaha-bhojanambu-restaurant-inspection/"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "yagnesh-virat-food-court-mgbs-imlibun",
+      "name": "Yagnesh Virat Food Court",
+      "area": "MGBS, Imlibun",
+      "restaurantType": "Food court",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "raid",
+          "date": "2024-09-10",
+          "dateLabel": "10 Sep 2024",
+          "dateExact": true,
+          "score": null,
+          "outcome": "Violations recorded",
+          "findings": "Flies/open bins; unlabelled refrigerator food; pest-screen and mandatory-record issues.",
+          "authority": "Commissioner of Food Safety, Telangana (@cfs_telangana)",
+          "sourceTitle": "Food Outlets At MGBS Violating Safety And Hygiene Regulations",
+          "sourceUrl": "https://food.ndtv.com/news/food-outlets-at-mg-bus-station-in-hyderabad-found-to-be-violating-safety-and-hygiene-regulations-6546650"
+        }
+      ],
+      "requestCount": 0
+    },
+    {
+      "id": "zayaka-food-court-near-amb-mall",
+      "name": "Zayaka Food Court",
+      "area": "Near AMB Mall",
+      "restaurantType": "Food court",
+      "isDemoData": false,
+      "events": [
+        {
+          "type": "rating",
+          "date": "2026-06-01",
+          "dateLabel": "Jun 2026",
+          "dateExact": false,
+          "score": 25,
+          "outcome": "CMC hygiene score published",
+          "findings": "CMC percentage score publicly reported; exact inspection date/details were not stated in the aggregate source.",
+          "authority": "Cyberabad Municipal Corporation (@CMC_Offcl)",
+          "sourceTitle": "Cyberabad restaurant hygiene scores - June compilation",
+          "sourceUrl": "https://hospitalitycareerprofile.com/restaurant-news/cyberabad-restaurant-hygiene-scores-cmc-inspection"
+        }
+      ],
       "requestCount": 0
     }
   ]
