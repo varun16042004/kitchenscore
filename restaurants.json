@@ -1,0 +1,90 @@
+{
+  "_note": "SAMPLE / DEMO DATA ONLY. These are placeholder records used to build and test KitchenScore's UI and freshness logic. None of this reflects a real FSSAI inspection of a real restaurant. Before any public launch, this file must be replaced with a manually curated dataset of real, sourced, dated FSSAI Hygiene Rating Scheme records, per the Project Overview's Key Deliverables and Compliance & Governance Summary (attribution-first, sourced-and-dated data, no unverified claims).",
+  "restaurants": [
+    {
+      "id": "spice-garden-banjara-hills",
+      "name": "[DEMO] Spice Garden",
+      "area": "Banjara Hills",
+      "address": "Road No. 12, Banjara Hills, Hyderabad",
+      "fssaiLicense": "DEMO-0000000001",
+      "isDemoData": true,
+      "rating": {
+        "score": 78,
+        "category": "Good",
+        "inspectionDate": "2026-06-15",
+        "source": "FSSAI Hygiene Rating Scheme"
+      },
+      "requestCount": 0
+    },
+    {
+      "id": "cloud-kitchen-express-gachibowli",
+      "name": "[DEMO] Cloud Kitchen Express",
+      "area": "Gachibowli",
+      "address": "Nanakramguda, Gachibowli, Hyderabad",
+      "fssaiLicense": "DEMO-0000000002",
+      "isDemoData": true,
+      "rating": {
+        "score": 92,
+        "category": "Excellent",
+        "inspectionDate": "2025-01-10",
+        "source": "FSSAI Hygiene Rating Scheme"
+      },
+      "requestCount": 0
+    },
+    {
+      "id": "old-town-diner-kukatpally",
+      "name": "[DEMO] Old Town Diner",
+      "area": "Kukatpally",
+      "address": "KPHB Colony, Kukatpally, Hyderabad",
+      "fssaiLicense": "DEMO-0000000003",
+      "isDemoData": true,
+      "rating": {
+        "score": 55,
+        "category": "Needs Improvement",
+        "inspectionDate": "2019-03-22",
+        "source": "FSSAI Hygiene Rating Scheme"
+      },
+      "requestCount": 0
+    },
+    {
+      "id": "green-leaf-cafe-jubilee-hills",
+      "name": "[DEMO] Green Leaf Cafe",
+      "area": "Jubilee Hills",
+      "address": "Road No. 36, Jubilee Hills, Hyderabad",
+      "fssaiLicense": null,
+      "isDemoData": true,
+      "rating": null,
+      "requestCount": 0
+    },
+    {
+      "id": "family-treat-restaurant-secunderabad",
+      "name": "[DEMO] Family Treat Restaurant",
+      "area": "Secunderabad",
+      "address": "SP Road, Secunderabad, Hyderabad",
+      "fssaiLicense": "DEMO-0000000005",
+      "isDemoData": true,
+      "rating": {
+        "score": 88,
+        "category": "Good",
+        "inspectionDate": "2026-07-01",
+        "source": "FSSAI Hygiene Rating Scheme"
+      },
+      "requestCount": 0
+    },
+    {
+      "id": "riverside-grill-lb-nagar",
+      "name": "[DEMO] Riverside Grill",
+      "area": "LB Nagar",
+      "address": "LB Nagar Ring Road, Hyderabad",
+      "fssaiLicense": "DEMO-0000000006",
+      "isDemoData": true,
+      "rating": {
+        "score": 40,
+        "category": "Poor",
+        "inspectionDate": "2021-11-05",
+        "source": "FSSAI Hygiene Rating Scheme"
+      },
+      "requestCount": 0
+    }
+  ]
+}
