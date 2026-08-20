@@ -17,6 +17,9 @@
   --stale-bg: #fbe9e7;
   --none: #6b7280;
   --none-bg: #eef0f2;
+
+  --raid: #a33d1f;
+  --raid-bg: #fbe6dc;
 }
 
 * { box-sizing: border-box; }
@@ -219,6 +222,7 @@ main { padding: 32px 0 64px; }
 .tier-dated { background: var(--dated-bg); color: var(--dated); }
 .tier-stale { background: var(--stale-bg); color: var(--stale); }
 .tier-none { background: var(--none-bg); color: var(--none); }
+.tier-raid { background: var(--raid-bg); color: var(--raid); }
 
 .source-line {
   margin-top: 10px;
@@ -300,4 +304,87 @@ main { padding: 32px 0 64px; }
   font-size: 0.78rem;
   color: var(--ink-soft);
   text-align: center;
+}
+
+.timeline-heading {
+  margin: 28px 0 12px;
+  font-size: 1.05rem;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  border-left-width: 4px;
+}
+
+.event-card.event-type-rating { border-left-color: var(--fresh); }
+.event-card.event-type-raid { border-left-color: var(--raid); }
+
+.event-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.event-type-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.event-type-badge.event-type-rating { background: var(--fresh-bg); color: var(--fresh); }
+.event-type-badge.event-type-raid { background: var(--raid-bg); color: var(--raid); }
+
+.event-date {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.event-score {
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.event-score-suffix {
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-left: 2px;
+}
+
+.event-outcome {
+  font-weight: 700;
+  color: var(--raid);
+  margin-bottom: 4px;
+}
+
+.event-findings {
+  font-size: 0.88rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.event-source {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.event-source a {
+  color: var(--brand-dark);
 }
