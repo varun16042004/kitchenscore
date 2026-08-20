@@ -1,0 +1,14 @@
+{
+  "name": "kitchenscore",
+  "version": "0.1.0",
+  "description": "KitchenScore — an independent restaurant kitchen-safety information platform. Hyderabad pilot MVP.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}
